@@ -95,14 +95,14 @@ let OmstandighedenK
 let KleurniveauK
 let Advies
 console.log(SumKou);
-if (SumKou<=-15) {
-    KleurniveauK="Zwart";OmstandighedenK='Extreem';Advies="→ Aflassen van training."
-} else if (SumKou>=-10 &&SumKou<-10) {
-    KleurniveauK="Rood";OmstandighedenK='Zeer Zwaar';Advies="→ Pas kledij maximaal aan \n → Gebruik eventueel warmtebronnen \n → Blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=-4 && SumKou<-4) {
-    KleurniveauK="Oranje";OmstandighedenK='Zwaar';Advies="→ Pas kledij maximaal aan \n → Gebruik eventueel warmtebronnen \n → Kom/blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=0 && SumKou <0) {
-    KleurniveauK="Geel";OmstandighedenK='Niet Ideaal';Advies="→ Pas kledij naar wens aan \n → Kom/blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
+if (SumKou<=-10) {
+    KleurniveauK="Zwart";OmstandighedenK='Extreem';Advies="→ Aflassen van de training"
+} else if (SumKou>=-10 &&SumKou<-4) {
+    KleurniveauK="Rood";OmstandighedenK='Zeer Zwaar';Advies="→ Pas, indien mogelijk, moment van training aan. \n → Max 1 uur activiteit \n → Adviseer maximale aanpassing van kledij \n → Zorg voor oefenvormen waarbij kinderen constant in beweging blijven \n → Zorg dat kinderen droog blijven \n → Hou kinderen uit de wind \n → Laat kinderen regelmatig drinken"
+} else if (SumKou>=-4 && SumKou<0) {
+    KleurniveauK="Oranje";OmstandighedenK='Zwaar';Advies="→ Adviseer aanpassing van kledij \n → Zorg voor oefenvormen waarbij kinderen constant in beweging blijven \n → Zorg dat kinderen droog blijven \n → Hou kinderen uit de wind \n → Laat kinderen regelmatig drinken"
+} else if (SumKou>=0 && SumKou <2) {
+    KleurniveauK="Geel";OmstandighedenK='Niet Ideaal';Advies="→ Pas kledij naar wens aan \n → Kom/blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Laat kinderen regelmatig drinken"
 } else if (SumKou>=2) { 
     KleurniveauK="Groen";OmstandighedenK='Goed';Advies="→ Geen aanpassingen"
 }
@@ -123,15 +123,15 @@ document.getElementById("Advies").innerText = Advies;
         let OmstandighedenW
         let KleurniveauW
         console.log(SumWarmte);
-        if (SumWarmte>=32) {
-            KleurniveauW="Zwart";OmstandighedenW='Extreem';Advies="→ Dringend verzoek om buitenactiviteiten te verplaatsen naar geschikter moment (indien mogelijk, vroeger/later op de dag).  \n \n Indien niet mogelijk, volg dan de volgende adviezen:\n → Elke 10 minuten drinken \n → Maximaal aantal pauzes \n → Beschikbaar water in ton/emmer \n → Koelen met natte handdoeken \n → Drinken water + isotone sportdrank"
-        } else if (SumWarmte>=31 && SumWarmte<32) {
+        if (SumWarmte>=30) {
+          KleurniveauW="Zwart";OmstandighedenW='Extreem';Advies="→ Aflassen van de training."
+        } else if (SumWarmte>=29 && SumWarmte<30) {
             KleurniveauW="Rood";OmstandighedenW='Zeer Zwaar';Advies="→ Max 1 uur activiteit \n → Elke 10 minuten drinken \n → Elke 10 minuten 4 minuten pauze \n → Beschikbaar water in ton/emmer \n → Koelen met natte handdoeken \n → Drinken water + isotone sportdrank"
-        } else if (SumWarmte>=29 && SumWarmte<31) {
-            KleurniveauW="Oranje";OmstandighedenW='Zwaar';Advies="→ Max 2 uur activiteit \n → Elke 15 minuten drinken \n → Elke 15 minuten 4 minuten pauze \n → Beschikbaar water in ton/emmer \n → Koelen met natte handdoeken \n → Drinken water + isotone sportdrank"
         } else if (SumWarmte>=27 && SumWarmte<29) {
+            KleurniveauW="Oranje";OmstandighedenW='Zwaar';Advies="→ Max 1.5 uur activiteit \n → Elke 15 minuten drinken \n → Elke 15 minuten 4 minuten pauze \n → Beschikbaar water in ton/emmer \n → Koelen met natte handdoeken \n → Drinken water + isotone sportdrank"
+        } else if (SumWarmte>=25 && SumWarmte<27) {
             KleurniveauW="Geel";OmstandighedenW='Niet Ideaal';Advies="→ Elke 25 minuten drinken \n → Drinken water + isotone sportdrank"
-        } else if (SumWarmte<=27) { 
+        } else if (SumWarmte<=25) { 
             KleurniveauW="Groen";OmstandighedenW='Goed';Advies="→ Geen aanpassingen"
         }
         document.getElementById("TIW").textContent = "Temperatuursindex: "+SumWarmte;
