@@ -97,13 +97,13 @@ let Advies
 console.log(SumKou);
 if (SumKou<=-15) {
     KleurniveauK="Zwart";OmstandighedenK='Extreem';Advies="→ Dringend verzoek om buitenactiviteiten te verplaatsen naar geschikter moment (indien mogelijk, vroeger/later op de dag). \n \n Indien niet mogelijk, volg dan de volgende adviezen:\n → Pas kledij maximaal aan \n → Gebruik eventueel warmtebronnen \n → Blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=-15 &&SumKou<-10) {
+} else if (SumKou>=-10 &&SumKou<-10) {
     KleurniveauK="Rood";OmstandighedenK='Zeer Zwaar';Advies="→ Pas kledij maximaal aan \n → Gebruik eventueel warmtebronnen \n → Blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=-10 && SumKou<-4) {
+} else if (SumKou>=-4 && SumKou<-4) {
     KleurniveauK="Oranje";OmstandighedenK='Zwaar';Advies="→ Pas kledij maximaal aan \n → Gebruik eventueel warmtebronnen \n → Kom/blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=-4 && SumKou <0) {
+} else if (SumKou>=0 && SumKou <0) {
     KleurniveauK="Geel";OmstandighedenK='Niet Ideaal';Advies="→ Pas kledij naar wens aan \n → Kom/blijf regelmatig in beweging \n → Blijf droog \n → Blijf uit de wind \n → Drink regelmatig"
-} else if (SumKou>=0) { 
+} else if (SumKou>=2) { 
     KleurniveauK="Groen";OmstandighedenK='Goed';Advies="→ Geen aanpassingen"
 }
 
